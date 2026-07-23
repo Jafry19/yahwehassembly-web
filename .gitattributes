@@ -1,0 +1,15 @@
+# Disable LFS for all files — use regular git objects
+*.png -filter -diff -merge -text
+*.jpg -filter -diff -merge -text
+*.jpeg -filter -diff -merge -text
+*.pdf -filter -diff -merge -text
+*.gif -filter -diff -merge -text
+*.webp -filter -diff -merge -text
+*.ico -filter -diff -merge -text
+*.gz -filter -diff -merge -text
+*.zip -filter -diff -merge -text
+*.tar -filter -diff -merge -text
+*.ttf -filter -diff -merge -text
+*.otf -filter -diff -merge -text
+*.woff -filter -diff -merge -text
+*.woff2 -filter -diff -merge -text

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-cinzel: 'Cinzel', serif;
+  --font-lora: 'Lora', serif;
+  --font-garamond: 'EB Garamond', serif;
+
+  --color-navy: #0a1628;
+  --color-navy-light: #142040;
+  --color-navy-mid: #1c2e50;
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8c96a;
+  --color-gold-pale: #f0dfa0;
+  --color-ivory: #f5edd8;
+  --color-parchment: #ede0c4;
+  --color-ink: #1a1208;
+}
+
+:root {
+  --background: #0a1628;
+  --foreground: #f5edd8;
+  --card: #142040;
+  --card-foreground: #f5edd8;
+  --primary: #c9a84c;
+  --primary-foreground: #0a1628;
+  --secondary: #1c2e50;
+  --secondary-foreground: #e8c96a;
+  --muted: #1c2e50;
+  --muted-foreground: #a89870;
+  --accent: #e8c96a;
+  --accent-foreground: #0a1628;
+  --border: rgba(201, 168, 76, 0.2);
+  --ring: #c9a84c;
+  --radius: 0.25rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a1628;
+  color: #f5edd8;
+  font-family: 'Lora', serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbar while preserving scroll */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a1628;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 76, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 168, 76, 0.6);
+}
+
+/* Gold ornamental divider */
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #c9a84c;
+}
+.ornament::before,
+.ornament::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #c9a84c, transparent);
+}
+
+/* Subtle parchment texture overlay for cards */
+.parchment-card {
+  background: linear-gradient(135deg, #142040 0%, #1c2e50 50%, #142040 100%);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+}
+
+/* Gold shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg, #c9a84c 0%, #f0dfa0 40%, #e8c96a 60%, #c9a84c 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}

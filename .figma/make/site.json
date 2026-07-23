@@ -1,0 +1,10 @@
+{
+  "description": "Easily import and manage website design files from various sources into Figma, streamlining the design process for web developers and designers.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
